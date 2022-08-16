@@ -41,12 +41,13 @@ export default function TableProduct() {
                 {products.map((product, index) => (
 
                         <tr key={product.id} className="lol">
-                            <td>{index + 1}</td>
                             <Link passHef href={`/products/details/${product.id}`} key={index} >
-                            <td>{product.name}</td>
-                            <td>{product.price}</td>
-                            <td>{product.stock}</td>
+                                <td>{product.name}</td>
                             </Link>
+                                <td>{product.price}</td>
+                                <td>{product.stock}</td>
+
+                            <td>{index + 1}</td>
                             <td>
                                 <button className="btn btn-danger" onClick={() => handleDelete(product.id)}>Delete</button>
                                 <Link passHef href={`/products/${product.id}`}>
